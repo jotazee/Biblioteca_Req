@@ -1,0 +1,22 @@
+.rodape2 {
+    width: 850px;
+    margin-left: auto;
+    margin-right: 0;
+    text-align: justify;
+}
+.container {
+  display: flex;                  /* Alinha os itens em linha */
+  align-items: flex-start;        /* Alinha os itens ao topo, para que fiquem na mesma linha */
+}
+
+.container img {
+  margin-right: 20px;             /* Espaço entre a imagem e o texto */
+}
+
+.texto {
+  max-width: 600px;               /* Limita a largura do texto */
+}
+
+.rodape2 {
+  margin: 0;                      /* Remove margens extras do texto */
+}
