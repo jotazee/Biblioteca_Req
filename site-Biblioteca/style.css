@@ -20,3 +20,18 @@
 .rodape2 {
   margin: 0;                      /* Remove margens extras do texto */
 }
+
+#rodape1 {
+  padding-left: 100px;
+}
+
+#padding1_1 {
+  padding-left: 100px;
+}
+
+#padding3 {
+  padding-left: 100px;
+}
+#padding3_3 {
+  padding-left: 100px;
+}
