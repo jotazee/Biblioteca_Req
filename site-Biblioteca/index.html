@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <title>Biblioteca Requisitos</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca Requisitos</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.4.4/dist/js/splide-extension-auto-scroll.min.js"></script>
 </head>
 <body>
 
-<!-- Barra de navegacao -->
+  <!-- Barra de navegação -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Lumi</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
       <span class="navbar-toggler-icon"></span>
     </button>
-  
+
     <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
@@ -26,9 +33,7 @@
           <a class="nav-link" href="#">Link</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
-          </a>
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#">Ação</a>
             <a class="dropdown-item" href="#">Outra ação</a>
@@ -45,13 +50,12 @@
       </form>
       <div class="text-end">
         <button type="button" class="btn btn-light me-2">Login</button>
-        <button type="button" class="btn btn-warning">Sign-up</button>
+        <button type="button" class="btn btn-warning">Cadastre-se</button>
       </div>
     </div>
   </nav>
-<!-- Fim da barra de navegacao -->
 
-<!-- Inicio da imagem de apresentacao -->
+  <!-- Carrossel -->
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -60,13 +64,13 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img class="d-block w-100" src="./imagens/rodape1.jpg" style = "height: 500px; object-fit: cover;" alt="Primeiro Slide">
+        <img class="d-block w-100" src="./imagens/rodape1.jpg" style="height: 500px; object-fit: cover;" alt="Primeiro Slide">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="./imagens/rodape2.jpg" style = "height: 500px; object-fit: cover;" alt="Segundo Slide">
+        <img class="d-block w-100" src="./imagens/rodape2.jpg" style="height: 500px; object-fit: cover;" alt="Segundo Slide">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="./imagens/rodape3.jpg" style = "height: 500px; object-fit: cover;" alt="Terceiro Slide">
+        <img class="d-block w-100" src="./imagens/rodape3.jpg" style="height: 500px; object-fit: cover;" alt="Terceiro Slide">
       </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -78,51 +82,47 @@
       <span class="sr-only">Próximo</span>
     </a>
   </div>
-<!-- Fim da imagem de apresentacao -->
 
-<!-- Inicio do conteudo -->
+  <!-- Conteúdo principal -->
   <div style="margin-top: 70px;"></div>
-    <div class="container marketing">
-      
-      <div class="row">
-        <div class="col-lg-4">
-          <svg aria-label="Placeholder" class="bd-placeholder-img rounded-circle" height="140" preserveAspectRatio="xMidYMid slice" role="img" width="140" xmlns="http://www.w3.org/2000/svg">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
-          </svg>
-          <h2 class="fw-normal">Heading</h2>
-          <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-          <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-        </div>
-        <div class="col-lg-4">
-          <svg aria-label="Placeholder" class="bd-placeholder-img rounded-circle" height="140" preserveAspectRatio="xMidYMid slice" role="img" width="140" xmlns="http://www.w3.org/2000/svg">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
-          </svg>
-          <h2 class="fw-normal">Heading</h2>
-          <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-          <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-        </div>
-        <div class="col-lg-4">
-          <svg aria-label="Placeholder" class="bd-placeholder-img rounded-circle" height="140" preserveAspectRatio="xMidYMid slice" role="img" width="140" xmlns="http://www.w3.org/2000/svg">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
-          </svg>
-          <h2 class="fw-normal">Heading</h2>
-          <p>And lastly this, the third column of representative placeholder content.</p>
-          <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-        </div>
+  <div class="container marketing">
+    <div class="row">
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" role="img">
+          <rect width="100%" height="100%" fill="#6c757d"></rect>
+        </svg>
+        <h2 class="fw-normal">Heading</h2>
+        <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+      </div>
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" role="img">
+          <rect width="100%" height="100%" fill="#6c757d"></rect>
+        </svg>
+        <h2 class="fw-normal">Heading</h2>
+        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+      </div>
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" role="img">
+          <rect width="100%" height="100%" fill="#6c757d"></rect>
+        </svg>
+        <h2 class="fw-normal">Heading</h2>
+        <p>And lastly this, the third column of representative placeholder content.</p>
+        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
       </div>
     </div>
-  </main>
-  
-  <div style="margin-top: 250px;"></div>
-  
-  <!-- Inicio do rodape -->
-  <h2 id="rodape1">Ler é a maneira mais rápida de viajar<br> sem sair do lugar.</br></h2>
-  <p id="rodape1_1">Ler é uma forma poderosa de adquirir novos conhecimentos. <br>Seja um romance, um livro técnico ou uma biografia, cada leitura acrescenta algo ao nosso repertório.</br> Com o tempo, isso melhora nosso vocabulário, raciocínio e capacidade de argumentação,<br> 
-  retornando-nos mais preparados para lidar com diferentes situações da vida.</br></p>
-  
+  </div>
+
+  <!-- Rodapé -->
+  <h2 id="rodape1">Ler é a maneira mais rápida de viajar<br> sem sair do lugar.</h2>
+  <p id="rodape1_1">
+    Ler é uma forma poderosa de adquirir novos conhecimentos.<br>
+    Seja um romance, um livro técnico ou uma biografia, cada leitura acrescenta algo ao nosso repertório.</br>
+    Com o tempo, isso melhora nosso vocabulário, raciocínio e capacidade de argumentação,<br>
+    retornando-nos mais preparados para lidar com diferentes situações da vida.
+  </p>
+
   <div style="margin-top: 100px;"></div>
 
   <div class="container">
@@ -132,27 +132,25 @@
       <p class="rodape2">
         A leitura ativa a imaginação e desperta a criatividade.<br>
         Ao mergulhar em histórias e universos diferentes, o leitor é levado a criar imagens mentais,
-        refletir sobre realidades alternativas e pensar de forma mais aberta e criativa.<br>
-        Isso é especialmente importante para quem busca inovação e soluções fora do comum.aaaaaa
+        refletir sobre realidades alternativas e pensar de forma mais aberta e criativa.
       </p>
     </div>
   </div>
 
   <div style="margin-top: 100px;"></div>
 
-  <h2 id= "rodape3">Um bom livro pode transformar um dia,<br> uma ideia pode transformar uma vida.<br></h2>
-  <p id="rodape3_3">Ler HAHAHAHAHHAtambém é um excelente refúgio para a mente.<br> Ao se concentrar em um livro, o leitor se desconecta das preocupações do dia a dia, o que pode reduzir o estresse e a ansiedade.</br> Além disso, a leitura frequente melhora a memória e a concentração, contribuindo para a saúde mental a longo prazo. </p>
-<!-- Fim do rodape -->
+  <h2 id="rodape3">Um bom livro pode transformar um dia,<br> uma ideia pode transformar uma vida.</h2>
+  <p id="rodape3_3">
+    Ler também é um excelente refúgio para a mente.<br>
+    Ao se concentrar em um livro, o leitor se desconecta das preocupações do dia a dia, o que pode reduzir o estresse e a ansiedade.<br>
+    Além disso, a leitura frequente melhora a memória e a concentração, contribuindo para a saúde mental a longo prazo.
+  </p>
+  
 
-
-
-
-
-
-
+  <!-- Scripts do Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
 
 </body>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </html>

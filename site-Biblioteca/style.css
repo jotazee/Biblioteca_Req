@@ -25,13 +25,18 @@
   padding-left: 100px;
 }
 
-#padding1_1 {
+#rodape1_1 {
   padding-left: 100px;
 }
 
-#padding3 {
+#rodape3 {
   padding-left: 100px;
 }
-#padding3_3 {
+#rodape3_3 {
   padding-left: 100px;
 }
+
+.col-lg-4 {
+  padding-bottom: 100px;
+}
+
