@@ -1,0 +1,57 @@
+.rodape {
+  background-color: #1d3f4f;
+  color: white;
+  padding: 40px 20px 20px;
+  font-size: 14px;
+}
+
+.rodape .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.rodape .coluna {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.rodape .coluna h4 {
+  margin-bottom: 10px;
+}
+
+.rodape .coluna ul {
+  list-style: none;
+  padding: 0;
+}
+
+.rodape .coluna ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
+}
+
+.rodape .redes-sociais {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.rodape .redes-sociais a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.rodape .legal {
+  text-align: center;
+  border-top: 1px solid #ffffff33;
+  padding-top: 10px;
+}
+
+.rodape .legal a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
