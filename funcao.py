@@ -13,7 +13,7 @@ if not os.path.exists("usuarios.json"):
 # Dicionários para controle interno
 tentativas = {}                                           # Guarda o número de tentativas erradas de cada usuário.
 bloqueados = {}     
-                                    # Guarda o tempo de desbloqueio de cada usuário.
+                                                             # Guarda o tempo de desbloqueio de cada usuário.
 
 def cadastrar(nome,data_nascimento,email, senha):
     with open("usuarios.json", "r") as f:                 # Abre o arquivo no modo de leitura.
