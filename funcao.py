@@ -15,7 +15,7 @@ tentativas = {}                                           # Guarda o número de 
 bloqueados = {}     
                                                              # Guarda o tempo de desbloqueio de cada usuário.
 
-def cadastrar(nome,data_nascimento,email, senha):
+def cadastrar(nome,data_nascimento,email, senha,):
     with open("usuarios.json", "r") as f:                 # Abre o arquivo no modo de leitura.
         usuarios = json.load(f)                           # Converte o conteúdo do JSON para um dicionário Python.
 
@@ -23,7 +23,7 @@ def cadastrar(nome,data_nascimento,email, senha):
         print("Usuário já existe.")                       # Isso impede que o mesmo nome de usuário seja usado duas vezes.
         return False
 
-    usuarios[email] = [nome,data_nascimento,senha]                           # Isso adiciona a nova entrada no dicionário: {"usuario": "senha"}
+    usuarios[email] = [nome,data_nascimento,senha,]                           # Isso adiciona a nova entrada no dicionário: {"usuario": "senha"}
 
     with open("usuarios.json", "w") as f:                 # Aqui salva novamente no arquivo JSON
         json.dump(usuarios, f)                            # Agora o dicionário atualizado é salvo no arquivo usuarios.json.
@@ -78,20 +78,26 @@ def cadastro_livro(titulo,autor, genero,classificacao):
     print("Cadastro realizado com sucesso!")              # Mostra a mensagem e retorna
     return True 
 
+def exibir_livros():
+    with open("livro.json", "r") as f:                 # Abre o arquivo no modo de leitura.
+        livros = json.load(f)                           # Converte o conteúdo do JSON para um dicionário Python.
+    print(livros)
+
 # Teste simples via terminal
 
 
-
+logado = False
 print("1 - Cadastrar\n2 - Login")
 op = input("Escolha uma opção: ")
 
-   
+ 
 if op == "1":
     nome = input("Nome: ")
     email = input("E-mail: ")
     data_nascimento = input("Data de Nascimento: ") 
     senha = input("Senha: ")
-    cadastrar(nome,data_nascimento,email, senha)
+    categroia = input("Categoria[autor, leitor]: ")
+    cadastrar(nome,data_nascimento,email, senha,)
 elif op == "2":
     email = input("E-mail: ")
     senha = input("Senha: ")
@@ -103,17 +109,16 @@ elif op == "sair":
 else:
     print("Opção inválida.")
 
-
 if logado:
     print("O que deseja fazer?")
-    print("1 - Ler um Livro")
+    print("1 - Ver Livros")
     print("2 - adcionar um Livro")
     print("3 - editar perfil")
     print("4 - sair")
    
     op = input("Escolha uma opção: ")
     if op == "1":
-        print("Livro lido")
+        exibir_livros()
     elif op == "2":
         titulo = input("Titulo: ")
         autor = input("Autor: ")
