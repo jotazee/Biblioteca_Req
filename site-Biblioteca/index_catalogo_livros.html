@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Catálogo de Livros</title>
+  
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    /* Reduz o tamanho dos cards para metade da largura padrão col-md-4 */
+    .book-card {
+      width: 160px; /* aprox metade do tamanho padrão */
+      margin: 0.5rem auto; /* centraliza e espaça */
+      transition: transform 0.2s ease;
+    }
+    .book-card:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+    .book-card .card-img-top {
+      height: 220px; /* altura menor para as imagens */
+      object-fit: cover; /* mantém proporção e corta o excesso */
+    }
+    .navbar-brand {
+      font-weight: bold;
+    }
+    /* Container flex para alinhar os cards com espaçamento */
+    #bookList {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="#">Catálogo de Livros</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastro</a></li>
+          <li class="nav-item"><a class="nav-link" href="configuracoes.html">Configurações</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    <h1 class="mb-4 text-center">Catálogo de Livros</h1>
+
+    <div class="row mb-4 justify-content-center">
+      <div class="col-md-6">
+        <input type="text" id="searchInput" class="form-control" placeholder="Pesquisar livro pelo título ou autor" onkeyup="filtrarLivros()" />
+      </div>
+    </div>
+
+    <div id="bookList">
+
+      <div class="book-card" data-title="Livro Um" data-author="Autor A">
+        <div class="card h-100">
+          <img src="imagens/livro_1.jpg" class="card-img-top" alt="Livro Um" />
+          <div class="card-body p-2">
+            <h5 class="card-title fs-6 mb-1">Livro Um</h5>
+            <p class="card-text mb-1">Autor A</p>
+            <p class="card-text"><small class="text-muted">Publicado em 2020</small></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="book-card" data-title="Livro Dois" data-author="Autor B">
+        <div class="card h-100">
+          <img src="imagens/livro_2.jpg" class="card-img-top" alt="Livro Dois" />
+          <div class="card-body p-2">
+            <h5 class="card-title fs-6 mb-1">Livro Dois</h5>
+            <p class="card-text mb-1">Autor B</p>
+            <p class="card-text"><small class="text-muted">Publicado em 2018</small></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="book-card" data-title="Livro Três" data-author="Autor C">
+        <div class="card h-100">
+          <img src="imagens/livro_3.jpg" class="card-img-top" alt="Livro Três" />
+          <div class="card-body p-2">
+            <h5 class="card-title fs-6 mb-1">Livro Três</h5>
+            <p class="card-text mb-1">Autor C</p>
+            <p class="card-text"><small class="text-muted">Publicado em 2019</small></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="book-card" data-title="Livro Quatro" data-author="Autor D">
+        <div class="card h-100">
+          <img src="imagens/livro_4.jpg" class="card-img-top" alt="Livro Quatro" />
+          <div class="card-body p-2">
+            <h5 class="card-title fs-6 mb-1">Livro Quatro</h5>
+            <p class="card-text mb-1">Autor D</p>
+            <p class="card-text"><small class="text-muted">Publicado em 2021</small></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="book-card" data-title="Livro Cinco" data-author="Autor E">
+        <div class="card h-100">
+          <img src="imagens/livro_5.jpg" class="card-img-top" alt="Livro Cinco" />
+          <div class="card-body p-2">
+            <h5 class="card-title fs-6 mb-1">Livro Cinco</h5>
+            <p class="card-text mb-1">Autor E</p>
+            <p class="card-text"><small class="text-muted">Publicado em 2017</small></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function filtrarLivros() {
+      const input = document.getElementById('searchInput');
+      const filtro = input.value.toLowerCase();
+      const livros = document.querySelectorAll('.book-card');
+
+      livros.forEach(livro => {
+        const titulo = livro.getAttribute('data-title').toLowerCase();
+        const autor = livro.getAttribute('data-author').toLowerCase();
+
+        if (titulo.includes(filtro) || autor.includes(filtro)) {
+          livro.style.display = '';
+        } else {
+          livro.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
